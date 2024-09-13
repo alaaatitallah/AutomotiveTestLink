@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="" name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="36" name="Activation Automatique des Phares" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="37" name="Test phares allumés">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[1]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>Voiture en marche</p>
+]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler une lumi&egrave;re ambiante inf&eacute;rieure &agrave; 500 lux et v&eacute;rifier que les phares s&#39;allument.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Les phares allum&eacute;s</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX01]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Activation Automatique des Phares]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="40" name="Test phares s'éteingent">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[2]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>Voiture en marche</p>
+
+<p>(PWF Whonen)</p>
+
+<p>Les phares allum&eacute;s</p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler une lumi&egrave;re ambiante sup&eacute;rieure &agrave; 600 lux</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Les phares s&#39;&eacute;teignent</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX01]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Activation Automatique des Phares]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="43" name="Suite de test Contrôle des Feux de Route" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[]]></details> 
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>
+<testcase internalid="44" name="Test les feux de route s'éteignent">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[3]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Les feux de route allum&eacute;s<br />
+	&nbsp;</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler un v&eacute;hicule venant en sens inverse &agrave; moins de 200 m&egrave;tres&nbsp;</p>
+
+<div id="gtx-trans" style="position: absolute; left: -61px; top: 44.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></actions>
+	<expectedresults><![CDATA[<p>les feux de route s&#39;&eacute;teignent</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX02]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Contrôle des Feux de Route]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="47" name="Test les feux de route s'allument">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[4]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Les feux de route sont &eacute;teints</li>
+</ul>
+
+<div id="gtx-trans" style="position: absolute; left: 184px; top: 44.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler l&#39;absence de v&eacute;hicules venant en sens inverse pendant 5 secondes</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Les feux de route s&#39;allument</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX02]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Contrôle des Feux de Route]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="50" name="Suite test d'Éclairage Adaptatif" >
+<node_order><![CDATA[3]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="51" name="Test ajustement de la direction du fisceau (vitesse 30 km/h)">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[5]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche&nbsp;</li>
+	<li>Feux allum&eacute;s</li>
+	<li>Moteur ON</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Conduire &agrave; 30 km/h</li>
+	<li>Tourner le volant &agrave; 45 degr&eacute;s</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<p>Direction du faisceau s&#39;ajuste dans &plusmn;5 degr&eacute;s.</p>
+
+<div id="gtx-trans" style="position: absolute; left: -14px; top: -15px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX03]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Éclairage Adaptatif]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="54" name="Test ajustement de la direction du fisceau (vitesse 80 km/h)">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[6]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Moteur ON</li>
+	<li>Les feux allum&eacute;s</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Conduire &agrave; 80 km/h</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>le faisceau des feux de route s&#39;ajuste correctement en fonction de la vitesse</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX03]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Éclairage Adaptatif]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite></testsuite>

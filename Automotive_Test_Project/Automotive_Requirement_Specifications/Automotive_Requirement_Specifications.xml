@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requirement-specification>
+<req_spec title="Module de Contrôle des Phares (HCM)"  doc_id="SPEC01"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[3]]></type>
+	<node_order><![CDATA[0]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[<p>- Contr&ocirc;le les fonctions des phares du v&eacute;hicule</p>
+
+<p>- Activation automatique des feux, le commutateur des feux de route</p>
+
+<p>- Eclairage adaptatif en fonction des conditions de conduite.</p>
+
+<div id="gtx-trans" style="position: absolute; left: 1px; top: 41.4px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>]]></scope>
+		<req_spec title="Exigences Fonctionnelles"  doc_id="SPEC1-1"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[3]]></type>
+	<node_order><![CDATA[1]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[<p>Tester les comportements fonctionelles du HCM</p>]]></scope>
+			<requirement>
+		<docid><![CDATA[EX01]]></docid>
+		<title><![CDATA[Activation Automatique des Phares]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>Allumer les phares lorsque la lumi&egrave;re ambiante tombe en dessous d&#39;un seuil pr&eacute;d&eacute;fini.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[2]]></expected_coverage>
+		
+	</requirement>
+	<requirement>
+		<docid><![CDATA[EX02]]></docid>
+		<title><![CDATA[Contrôle des Feux de Route]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>Commuter automatiquement aux feux de route lorsqu&#39;aucun trafic venant en sens inverse n&#39;est d&eacute;tect&eacute;</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[2]]></expected_coverage>
+		
+	</requirement>
+	<requirement>
+		<docid><![CDATA[EX03]]></docid>
+		<title><![CDATA[Éclairage Adaptatif]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>3</node_order>
+		<description><![CDATA[<p>Ajuster la direction du faisceau des phares en fonction de l&#39;angle de direction et de la vitesse du v&eacute;hicule</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[2]]></expected_coverage>
+		
+	</requirement>
+</req_spec>
+<req_spec title="Exigences de Performance"  doc_id="SPEC1-2"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[3]]></type>
+	<node_order><![CDATA[2]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[<p>Tester les comportements de performances</p>]]></scope>
+			<requirement>
+		<docid><![CDATA[EX04]]></docid>
+		<title><![CDATA[Temps de Réponse]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>Le syst&egrave;me doit r&eacute;agir aux changements de lumi&egrave;re dans un d&eacute;lai de 1 seconde.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[5]]></type>
+		<expected_coverage><![CDATA[2]]></expected_coverage>
+		
+	</requirement>
+	<requirement>
+		<docid><![CDATA[EX05]]></docid>
+		<title><![CDATA[Précision]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>L&#39;&eacute;clairage adaptatif doit ajuster la direction du faisceau avec une pr&eacute;cision de &plusmn;5 degr&eacute;s par rapport &agrave; l&#39;angle pr&eacute;vu.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[5]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		
+	</requirement>
+</req_spec>
+<req_spec title="Exigences d'Interface Utilisateur"  doc_id="SPEC1-3"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[3]]></type>
+	<node_order><![CDATA[3]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[]]></scope>
+			<requirement>
+		<docid><![CDATA[EX06]]></docid>
+		<title><![CDATA[Affichage du Panneau de Contrôle]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>Fournir des indicateurs visuels pour le statut des phares sur le tableau de bord du v&eacute;hicule.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[4]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		
+	</requirement>
+</req_spec>
+<req_spec title="Normes de Sécurité"  doc_id="SPEC1-4"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[3]]></type>
+	<node_order><![CDATA[4]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[]]></scope>
+			<requirement>
+		<docid><![CDATA[EX07]]></docid>
+		<title><![CDATA[Conformité]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>Doit &ecirc;tre conforme &agrave; la norme ISO 26262 pour la s&eacute;curit&eacute; fonctionnelle.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[6]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		
+	</requirement>
+	<requirement>
+		<docid><![CDATA[EX08]]></docid>
+		<title><![CDATA[Modes de Défaillance]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>Le module doit entrer en mode de s&eacute;curit&eacute; en cas de d&eacute;faillance critique, par exemple en allumant les feux de croisement.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[7]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		
+	</requirement>
+</req_spec>
+<req_spec title="Exigences Environnementales"  doc_id="SPEC1-5"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[3]]></type>
+	<node_order><![CDATA[5]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[]]></scope>
+			<requirement>
+		<docid><![CDATA[EX09]]></docid>
+		<title><![CDATA[Résistance à l'Eau]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>Indice de protection IP68.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		
+	</requirement>
+	<requirement>
+		<docid><![CDATA[EX10]]></docid>
+		<title><![CDATA[Plage de Température]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>Doit fonctionner entre -40&deg;C et 85&deg;C.</p>]]></description>
+		<status><![CDATA[R]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		
+	</requirement>
+</req_spec>
+</req_spec>
+</requirement-specification>

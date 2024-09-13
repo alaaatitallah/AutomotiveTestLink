@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="" name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="36" name="Activation Automatique des Phares" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="37" name="Test phares allumés">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[1]]></externalid>
+	<version><![CDATA[2]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>Voiture en marche</p>
+
+<p>Moteur ON</p>
+]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler une lumi&egrave;re ambiante inf&eacute;rieure &agrave; 500 lux et v&eacute;rifier que les phares s&#39;allument.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Les phares allum&eacute;s</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX01]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Activation Automatique des Phares]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="40" name="Test phares s'éteingent">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[2]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>Voiture en marche</p>
+
+<p>(PWF Whonen)</p>
+
+<p>Les phares allum&eacute;s</p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler une lumi&egrave;re ambiante sup&eacute;rieure &agrave; 600 lux</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Les phares s&#39;&eacute;teignent</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX01]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Activation Automatique des Phares]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="43" name="Suite de test Contrôle des Feux de Route" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[]]></details> 
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>
+<testcase internalid="44" name="Test les feux de route s'éteignent">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[3]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Les feux de route allum&eacute;s<br />
+	&nbsp;</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler un v&eacute;hicule venant en sens inverse &agrave; moins de 200 m&egrave;tres&nbsp;</p>
+
+<div id="gtx-trans" style="position: absolute; left: -61px; top: 44.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></actions>
+	<expectedresults><![CDATA[<p>les feux de route s&#39;&eacute;teignent</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX02]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Contrôle des Feux de Route]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="47" name="Test les feux de route s'allument">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[4]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Les feux de route sont &eacute;teints</li>
+</ul>
+
+<div id="gtx-trans" style="position: absolute; left: 184px; top: 44.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Simuler l&#39;absence de v&eacute;hicules venant en sens inverse pendant 5 secondes</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Les feux de route s&#39;allument</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX02]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Contrôle des Feux de Route]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="50" name="Suite test d'Éclairage Adaptatif" >
+<node_order><![CDATA[3]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="51" name="Test ajustement de la direction du fisceau (vitesse 30 km/h)">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[5]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche&nbsp;</li>
+	<li>Feux allum&eacute;s</li>
+	<li>Moteur ON</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Conduire &agrave; 30 km/h</li>
+	<li>Tourner le volant &agrave; 45 degr&eacute;s</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<p>Direction du faisceau s&#39;ajuste dans &plusmn;5 degr&eacute;s.</p>
+
+<div id="gtx-trans" style="position: absolute; left: -14px; top: -15px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX03]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Éclairage Adaptatif]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="54" name="Test ajustement de la direction du fisceau (vitesse 80 km/h)">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[6]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Moteur ON</li>
+	<li>Les feux allum&eacute;s</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Conduire &agrave; 80 km/h</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>le faisceau des feux de route s&#39;ajuste correctement en fonction de la vitesse</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Fonctionnelles]]></req_spec_title>
+			<doc_id><![CDATA[EX03]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Éclairage Adaptatif]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="57" name="Suite test de performance - Temps de réponse" >
+<node_order><![CDATA[4]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="58" name="Test temps de réponse de phare - code">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[7]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Phares allum&eacute;s</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Simuler un v&eacute;hicule devant la voiture sous test</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Les phares s&#39;&eacute;teignent</li>
+	<li>Code allum&eacute; dans 1 sec</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences de Performance]]></req_spec_title>
+			<doc_id><![CDATA[EX04]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Temps de Réponse]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="61" name="Test temps de réponse de code - phares">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[8]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+	<li>Phares OFF</li>
+	<li>Un v&eacute;hicule devant la voiture sous test</li>
+</ul>
+
+<div id="gtx-trans" style="position: absolute; left: 209px; top: 15.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Eliminer le v&eacute;hicule devant la voiture sous test</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>les phares s&#39;allument dans une dur&eacute;e de 1 sec</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences de Performance]]></req_spec_title>
+			<doc_id><![CDATA[EX04]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Temps de Réponse]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="64" name="Suite de test de performance - précision" >
+<node_order><![CDATA[5]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="65" name="Test précision ajustement de la direction de fisceaux">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[9]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche&nbsp;</li>
+	<li>Feux ON</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Conduire &agrave; 30KM/h</li>
+	<li>Tourner le voulant &agrave; 45&deg;</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>la direction du faisceau ajust&eacute;e avec une pr&eacute;cision de &plusmn;5 degr&eacute;s par rapport &agrave; l&#39;angle pr&eacute;vu</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences de Performance]]></req_spec_title>
+			<doc_id><![CDATA[EX05]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Précision]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="68" name="Suite de test d'interface utilisateur" >
+<node_order><![CDATA[6]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="69" name="Test Affichage du Panneau de Contrôle">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[10]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>15.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Allumer les phares</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Idicateur en blue sur le&nbsp;Panneau de Contr&ocirc;le indique que les phares sont allum&eacute;es</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Allumer le code</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Idicateur en vert sur le&nbsp;Panneau de Contr&ocirc;le indique que les codes&nbsp;sont allum&eacute;es</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Feux OFF</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Aucun indicateur est affich&eacute; sur le Paneau de Controle</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences d'Interface Utilisateur]]></req_spec_title>
+			<doc_id><![CDATA[EX06]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Affichage du Panneau de Contrôle]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="74" name="Suite de test - Normes de sécurité" >
+<node_order><![CDATA[7]]></node_order>
+<details><![CDATA[]]></details> 
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>
+<testcase internalid="75" name="Test conformité à la norme ISO 26262">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[11]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>30.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>V&eacute;rifier le syst&egrave;me d&#39;&eacute;clairage par rapport les exigences de la norme 26262 (S&eacute;curit&eacute; Fonctionelle)</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Syst&egrave;me d&#39;&eacute;clairage conforme &agrave; la norme 26262</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Normes de Sécurité]]></req_spec_title>
+			<doc_id><![CDATA[EX07]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Conformité]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="78" name="Test Mode de sécurité">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[12]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Voiture en marche</li>
+</ul>
+
+<div id="gtx-trans" style="position: absolute; left: 93px; top: 29.36px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>20.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Simuler une d&eacute;faillence (par exemple coupure cable)</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Les indicateurs doit etre allum&eacute;s pour indiquer l&#39;anomalie</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Normes de Sécurité]]></req_spec_title>
+			<doc_id><![CDATA[EX08]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Modes de Défaillance]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="82" name="Suite test - Conditions de l'environnement" >
+<node_order><![CDATA[8]]></node_order>
+<details><![CDATA[]]></details> 
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>
+<testcase internalid="83" name="Test Environnemental : Résistance à l'Eau">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[13]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>20.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Emerger le module pendant 30 min</li>
+	<li>V&eacute;rifier le syst&egrave;me d&#39;eclairage conforme &agrave; l&#39;indice de protection IP68</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Syst&egrave;me d&#39;&eacute;clairage conforme &agrave; l&#39;indice de protection IP68</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Environnementales]]></req_spec_title>
+			<doc_id><![CDATA[EX09]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Résistance à l'Eau]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="86" name="Test Environnemental : Plage de Température">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[14]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>20.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Etablir une temp&eacute;rature -39.9&deg;C</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Syst&egrave;me ne fonctionne pas</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Etablir une temp&eacute;rature de -40&deg;C</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Syst&egrave;me fonctionne</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Etablir une temp&eacute;rature de 85&deg;C</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Syst&egrave;me fonctionne</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<ul>
+	<li>Etablir une temp&eacute;rature de 85.1&deg;C</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Syst&egrave;me ne fonctionne pas</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<keywords><keyword name="Regression"><notes><![CDATA[
+Ce mot clé doit etre utiliser pour les test de regressions
+]]></notes></keyword>
+</keywords>	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Exigences Environnementales]]></req_spec_title>
+			<doc_id><![CDATA[EX10]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Plage de Température]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite></testsuite>

@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testplan Plan de test sprint 1</title>
+<link type="text/css" rel="stylesheet" href="http://127.0.0.1:81/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width=231 height=56 src="http://127.0.0.1:81/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Plan Design Report</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Test Projet Automobile<br/>Test Plan: Plan de test sprint 1</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 09/12/2024</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 10px;"><b><a href="#toc_1_1">1.1.Activation Automatique des Phares</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc37">CT-1: Test phares allumés</a></p><p style="padding-left: 30px;"><a href="#toc_tc40">CT-2: Test phares s'éteingent</a></p><p style="padding-left: 10px;"><b><a href="#toc_1_2">1.2.Suite de test Contrôle des Feux de Route</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc44">CT-3: Test les feux de route s'éteignent</a></p><p style="padding-left: 30px;"><a href="#toc_tc47">CT-4: Test les feux de route s'allument</a></p><p style="padding-left: 10px;"><b><a href="#toc_1_3">1.3.Suite test d'Éclairage Adaptatif</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc51">CT-5: Test ajustement de la direction du fisceau (vitesse 30 km/h)</a></p><p style="padding-left: 30px;"><a href="#toc_tc54">CT-6: Test ajustement de la direction du fisceau (vitesse 80 km/h)</a></p><p style="padding-left: 10px;"><b><a href="#toc_1_4">1.4.Suite test de performance - Temps de réponse</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc58">CT-7: Test temps de réponse de phare - code</a></p><p style="padding-left: 30px;"><a href="#toc_tc61">CT-8: Test temps de réponse de code - phares</a></p><p style="padding-left: 10px;"><b><a href="#toc_1_5">1.5.Suite de test de performance - précision</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc65">CT-9: Test précision ajustement de la direction de fisceaux</a></p><p style="padding-left: 10px;"><b><a href="#toc_1_6">1.6.Suite de test d'interface utilisateur</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc69">CT-10: Test Affichage du Panneau de Contrôle</a></p><p style="padding-left: 10px;"><b><a href="#toc_1_7">1.7.Suite de test - Normes de sécurité</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc75">CT-11: Test conformité à la norme ISO 26262</a></p><p style="padding-left: 30px;"><a href="#toc_tc78">CT-12: Test Mode de sécurité</a></p><p style="padding-left: 10px;"><b><a href="#toc_1_8">1.8.Suite test - Conditions de l'environnement</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc83">CT-13: Test Environnemental : Résistance à l'Eau</a></p><p style="padding-left: 30px;"><a href="#toc_tc86">CT-14: Test Environnemental : Plage de Température</a></p></div><h1 class="doclevel" >Test Project: Test Projet Automobile</h1>
+<div class="txtlevel"><p>-Tester le Module de Contr&ocirc;le des Phares (HCM) con&ccedil;u pour le v&eacute;hicule ABC Mod&egrave;le 2025. Son document d&eacute;taille les exigences fonctionnelles, techniques et de test pour garantir que le module r&eacute;pond &agrave; toutes les normes de performance et de s&eacute;curit&eacute;.</p>
+
+<p>- Tester le syst&egrave;me de verrouillage centralis&eacute; (SVC) du v&eacute;hicule ABC Mod&egrave;le 2025. Son document d&eacute;crit les exigences fonctionnelles, techniques et les cas de test n&eacute;cessaires pour assurer que le syst&egrave;me r&eacute;pond &agrave; toutes les normes de performance et de s&eacute;curit&eacute;.</p>
+
+<p>- Tester le moteur du v&eacute;hicule ABC Mod&egrave;le 2025. Son document d&eacute;finit les exigences fonctionnelles, techniques et les crit&egrave;res de test n&eacute;cessaires pour garantir que le moteur satisfait aux normes de performance, de s&eacute;curit&eacute; et de conformit&eacute;.</p>
+
+<div id="gtx-trans" style="position: absolute; left: 280px; top: 132.6px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div></div>
+ <br/><h1 class="doclevel" style="page-break-before: avoid;"  >Test Plan: Plan de test sprint 1</h1>
+<div class="txtlevel"><p>On test le syst&egrave;me d&#39;&eacute;clairage</p></div>
+ <br/><p></p><a name='toc_1_1'></a>
+<h1 class='doclevel'>1.1.Test Suite : Activation Automatique des Phares</h1>
+<a name="toc_tc37"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-1: Test phares allumés&nbsp;<span style="font-size: 80%;">[Version : 2]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Voiture en marche</p>
+
+<p>Moteur ON</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Simuler une lumi&egrave;re ambiante inf&eacute;rieure &agrave; 500 lux et v&eacute;rifier que les phares s&#39;allument.</p>
+</td><td><p>Les phares allum&eacute;s</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">5.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX01:  Activation Automatique des Phares [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc40"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-2: Test phares s'éteingent&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Voiture en marche</p>
+
+<p>(PWF Whonen)</p>
+
+<p>Les phares allum&eacute;s</p>
+
+<div>
+<div>&nbsp;</div>
+</div>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Simuler une lumi&egrave;re ambiante sup&eacute;rieure &agrave; 600 lux</p>
+</td><td><p>Les phares s&#39;&eacute;teignent</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">5.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX01:  Activation Automatique des Phares [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name='toc_1_2'></a>
+<h1 class='doclevel'>1.2.Test Suite : Suite de test Contrôle des Feux de Route</h1>
+<a name="toc_tc44"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-3: Test les feux de route s'éteignent&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche</li>
+	<li>Les feux de route allum&eacute;s<br />
+	&nbsp;</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Simuler un v&eacute;hicule venant en sens inverse &agrave; moins de 200 m&egrave;tres&nbsp;</p>
+
+<div id="gtx-trans" style="position: absolute; left: -61px; top: 44.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+</td><td><p>les feux de route s&#39;&eacute;teignent</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX02:  Contrôle des Feux de Route [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc47"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-4: Test les feux de route s'allument&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche</li>
+	<li>Les feux de route sont &eacute;teints</li>
+</ul>
+
+<div id="gtx-trans" style="position: absolute; left: 184px; top: 44.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Simuler l&#39;absence de v&eacute;hicules venant en sens inverse pendant 5 secondes</p>
+</td><td><p>Les feux de route s&#39;allument</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX02:  Contrôle des Feux de Route [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name='toc_1_3'></a>
+<h1 class='doclevel'>1.3.Test Suite : Suite test d'Éclairage Adaptatif</h1>
+<a name="toc_tc51"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-5: Test ajustement de la direction du fisceau (vitesse 30 km/h)&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche&nbsp;</li>
+	<li>Feux allum&eacute;s</li>
+	<li>Moteur ON</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Conduire &agrave; 30 km/h</li>
+	<li>Tourner le volant &agrave; 45 degr&eacute;s</li>
+</ul>
+</td><td><p>Direction du faisceau s&#39;ajuste dans &plusmn;5 degr&eacute;s.</p>
+
+<div id="gtx-trans" style="position: absolute; left: -14px; top: -15px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX03:  Éclairage Adaptatif [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc54"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-6: Test ajustement de la direction du fisceau (vitesse 80 km/h)&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche</li>
+	<li>Moteur ON</li>
+	<li>Les feux allum&eacute;s</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Conduire &agrave; 80 km/h</li>
+</ul>
+</td><td><ul>
+	<li>le faisceau des feux de route s&#39;ajuste correctement en fonction de la vitesse</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX03:  Éclairage Adaptatif [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_4'></a>
+<h1 class='doclevel'>1.4.Test Suite : Suite test de performance - Temps de réponse</h1>
+<a name="toc_tc58"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-7: Test temps de réponse de phare - code&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche</li>
+	<li>Phares allum&eacute;s</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Simuler un v&eacute;hicule devant la voiture sous test</li>
+</ul>
+</td><td><ul>
+	<li>Les phares s&#39;&eacute;teignent</li>
+	<li>Code allum&eacute; dans 1 sec</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX04:  Temps de Réponse [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc61"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-8: Test temps de réponse de code - phares&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche</li>
+	<li>Phares OFF</li>
+	<li>Un v&eacute;hicule devant la voiture sous test</li>
+</ul>
+
+<div id="gtx-trans" style="position: absolute; left: 209px; top: 15.5455px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Eliminer le v&eacute;hicule devant la voiture sous test</li>
+</ul>
+</td><td><ul>
+	<li>les phares s&#39;allument dans une dur&eacute;e de 1 sec</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX04:  Temps de Réponse [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_1_5'></a>
+<h1 class='doclevel'>1.5.Test Suite : Suite de test de performance - précision</h1>
+<a name="toc_tc65"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-9: Test précision ajustement de la direction de fisceaux&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche&nbsp;</li>
+	<li>Feux ON</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Conduire &agrave; 30KM/h</li>
+	<li>Tourner le voulant &agrave; 45&deg;</li>
+</ul>
+</td><td><ul>
+	<li>la direction du faisceau ajust&eacute;e avec une pr&eacute;cision de &plusmn;5 degr&eacute;s par rapport &agrave; l&#39;angle pr&eacute;vu</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX05:  Précision [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name='toc_1_6'></a>
+<h1 class='doclevel'>1.6.Test Suite : Suite de test d'interface utilisateur</h1>
+<a name="toc_tc69"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-10: Test Affichage du Panneau de Contrôle&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Allumer les phares</li>
+</ul>
+</td><td><ul>
+	<li>Idicateur en blue sur le&nbsp;Panneau de Contr&ocirc;le indique que les phares sont allum&eacute;es</li>
+</ul>
+</td></tr><tr><td width="5">2</td><td><ul>
+	<li>Allumer le code</li>
+</ul>
+</td><td><ul>
+	<li>Idicateur en vert sur le&nbsp;Panneau de Contr&ocirc;le indique que les codes&nbsp;sont allum&eacute;es</li>
+</ul>
+</td></tr><tr><td width="5">3</td><td><ul>
+	<li>Feux OFF</li>
+</ul>
+</td><td><ul>
+	<li>Aucun indicateur est affich&eacute; sur le Paneau de Controle</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">15.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX06:  Affichage du Panneau de Contrôle [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name='toc_1_7'></a>
+<h1 class='doclevel'>1.7.Test Suite : Suite de test - Normes de sécurité</h1>
+<a name="toc_tc75"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-11: Test conformité à la norme ISO 26262&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>V&eacute;rifier le syst&egrave;me d&#39;&eacute;clairage par rapport les exigences de la norme 26262 (S&eacute;curit&eacute; Fonctionelle)</li>
+</ul>
+</td><td><ul>
+	<li>Syst&egrave;me d&#39;&eacute;clairage conforme &agrave; la norme 26262</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">30.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX07:  Conformité [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc78"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-12: Test Mode de sécurité&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>Voiture en marche</li>
+</ul>
+
+<div id="gtx-trans" style="position: absolute; left: 93px; top: 29.36px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Simuler une d&eacute;faillence (par exemple coupure cable)</li>
+</ul>
+</td><td><ul>
+	<li>Les indicateurs doit etre allum&eacute;s pour indiquer l&#39;anomalie</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">20.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX08:  Modes de Défaillance [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name='toc_1_8'></a>
+<h1 class='doclevel'>1.8.Test Suite : Suite test - Conditions de l'environnement</h1>
+<a name="toc_tc83"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-13: Test Environnemental : Résistance à l'Eau&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Emerger le module pendant 30 min</li>
+	<li>V&eacute;rifier le syst&egrave;me d&#39;eclairage conforme &agrave; l&#39;indice de protection IP68</li>
+</ul>
+</td><td><ul>
+	<li>Syst&egrave;me d&#39;&eacute;clairage conforme &agrave; l&#39;indice de protection IP68</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">20.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX09:  Résistance à l'Eau [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc86"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case CT-14: Test Environnemental : Plage de Température&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">alaaatitallah</td></tr>
+<tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><ul>
+	<li>Etablir une temp&eacute;rature -39.9&deg;C</li>
+</ul>
+</td><td><ul>
+	<li>Syst&egrave;me ne fonctionne pas</li>
+</ul>
+</td></tr><tr><td width="5">2</td><td><ul>
+	<li>Etablir une temp&eacute;rature de -40&deg;C</li>
+</ul>
+</td><td><ul>
+	<li>Syst&egrave;me fonctionne</li>
+</ul>
+</td></tr><tr><td width="5">3</td><td><ul>
+	<li>Etablir une temp&eacute;rature de 85&deg;C</li>
+</ul>
+</td><td><ul>
+	<li>Syst&egrave;me fonctionne</li>
+</ul>
+</td></tr><tr><td width="5">4</td><td><ul>
+	<li>Etablir une temp&eacute;rature de 85.1&deg;C</li>
+</ul>
+</td><td><ul>
+	<li>Syst&egrave;me ne fonctionne pas</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">20.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="3">High</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">EX10:  Plage de Température [Version: 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Regression<br /></td></tr>
+</table>
+</div>
+<h1 class="doclevel">Execution time metrics</h1>
+<div>
+<p>Estimated time for executing 14 test cases (hours):3.08</p>
+</div>
+
+</body>
+</html>

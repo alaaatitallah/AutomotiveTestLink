@@ -1,0 +1,104 @@
+Document de Spécifications des Exigences pour les feux
+1. Introduction
+Objectif : Ce document décrit les exigences pour le Module de Contrôle des Phares (HCM) conçu pour le véhicule ABC Modèle 2025. Il détaille les exigences fonctionnelles, techniques et de test pour garantir que le module répond à toutes les normes de performance et de sécurité.
+Portée : Le HCM contrôle les fonctions des phares du véhicule, y compris l'activation automatique des feux, le commutateur des feux de route et l'éclairage adaptatif en fonction des conditions de conduite.
+
+Définitions et Acronymes :
+• HCM : Module de Contrôle des Phares
+• CAN : Réseau de Contrôleur de Zone
+• LED : Diode Électroluminescente
+
+2. Aperçu du Produit
+Description du Produit : Le HCM est un module électronique responsable du contrôle de diverses fonctions des phares basées sur les entrées des capteurs et les commandes du conducteur.
+Objectifs :
+• Activer automatiquement les phares en fonction de l'éclairage ambiant.
+• Permettre le commutateur des feux de route et l'éclairage adaptatif.
+• Assurer un fonctionnement fiable dans diverses conditions de conduite.
+
+3. Exigences Fonctionnelles
+Fonctionnalité du Système :
+• Activation Automatique des Phares : Allumer les phares lorsque la lumière ambiante tombe en dessous d'un seuil prédéfini.
+• Contrôle des Feux de Route : Commuter automatiquement aux feux de route lorsqu'aucun trafic venant en sens inverse n'est détecté.
+• Éclairage Adaptatif : Ajuster la direction du faisceau des phares en fonction de l'angle de direction et de la vitesse du véhicule.
+Exigences de Performance :
+• Temps de Réponse : Le système doit réagir aux changements de lumière dans un délai de 1 seconde.
+• Précision : L'éclairage adaptatif doit ajuster la direction du faisceau avec une précision de ±5 degrés par rapport à l'angle prévu.
+Exigences d'Interface Utilisateur :
+• Affichage du Panneau de Contrôle : Fournir des indicateurs visuels pour le statut des phares sur le tableau de bord du véhicule.
+
+4. Exigences Techniques
+Spécifications de Conception :
+• Microcontrôleur : Microcontrôleur 16 bits avec une fréquence d'horloge de 100 MHz.
+• Mémoire : Mémoire vive de 256 Mo, stockage flash de 512 Mo.
+• Connectivité : Interface CAN pour la communication avec d'autres systèmes du véhicule.
+• Dimensions : Dimensions maximales de 120 mm x 100 mm x 30 mm.
+Normes de Sécurité :
+• Conformité : Doit être conforme à la norme ISO 26262 pour la sécurité fonctionnelle.
+• Modes de Défaillance : Le module doit entrer en mode de sécurité en cas de défaillance critique, par exemple en allumant les feux de croisement.
+Exigences Environnementales :
+• Résistance à l'Eau : Indice de protection IP68.
+• Plage de Température : Doit fonctionner entre -40°C et 85°C.
+
+5. Exigences Réglementaires et de Conformité
+Normes Légales et Réglementaires :
+• Normes d'Émission : Doit être conforme au Règlement ECE 48 (phares et systèmes d'éclairage).
+• Normes de Sécurité : Doit respecter la norme FMVSS 108 pour les dispositifs d'éclairage et réfléchissants.
+
+Tests et Validation :
+Tests Fonctionnels :
+• Activation Automatique des Phares :
+   o Cas de Test 1 : Simuler une lumière ambiante inférieure à 500 lux et vérifier que les phares s'allument.
+   o Cas de Test 2 : Simuler une lumière ambiante supérieure à 600 lux et vérifier que les phares s'éteignent.
+• Contrôle des Feux de Route :
+   o Cas de Test 1 : Simuler un véhicule venant en sens inverse à moins de 200 mètres et vérifier que les feux de route s'éteignent.
+   o Cas de Test 2 : Simuler l'absence de véhicules venant en sens inverse pendant 5 secondes et vérifier que les feux de route s'allument.
+• Éclairage Adaptatif :
+   o Cas de Test 1 : Conduire à 30 km/h et tourner le volant à 45 degrés ; vérifier que la direction du faisceau s'ajuste dans ±5 degrés.
+   o Cas de Test 2 : Conduire à 80 km/h et vérifier que le faisceau des feux de route s'ajuste correctement en fonction de la vitesse.
+Tests Environnementaux :
+• Résistance à l'Eau : Immerger le module dans l'eau pendant 30 minutes à une profondeur de 1 mètre et vérifier qu'il n'y a pas d'infiltration d'eau.
+• Cyclage de Température : Exposer le module à des cycles de température de -40°C à 85°C pendant 100 cycles et vérifier la performance opérationnelle.
+Tests de Conformité Réglementaire :
+• Conformité au Règlement ECE 48 :
+   o Cas de Test 1 : Vérifier l'intensité lumineuse et le motif du faisceau conformément aux exigences de l'ECE à l'aide d'un test photométrique.
+   o Cas de Test 2 : Mesurer la température de couleur de la lumière pour garantir qu'elle respecte les normes réglementaires.
+
+6. Intégration et Compatibilité
+Intégration Système :
+• Interface avec les Systèmes du Véhicule : Doit s'intégrer avec le bus CAN du véhicule pour communiquer avec d'autres modules de contrôle.
+Exigences de Compatibilité :
+• Intégration au Véhicule : Compatible avec les systèmes d'éclairage et de phares existants du modèle XYZ 2025.
+
+7. Assurance Qualité
+Normes de Qualité :
+• Certification ISO 9001 : Le fabricant doit être certifié ISO 9001.
+Inspection et Tests :
+• Tests de Production : Chaque module doit passer des tests fonctionnels et environnementaux avant expédition.
+   8. Documentation et Formation
+Documentation Utilisateur :
+• Manuel : Un manuel utilisateur décrivant l'installation, le fonctionnement et le dépannage doit être fourni.
+Exigences de Formation :
+• Sessions de Formation : Formation initiale pour les techniciens d'installation et de maintenance fournie par le fabricant.
+
+9. Maintenance et Support
+Exigences de Maintenance :
+• Intervalles de Service : Aucun entretien routinier requis, mais le module doit être inspecté lors des services réguliers du véhicule.
+Services de Support :
+• Support Technique : Ligne d'assistance technique disponible 24/7 et ressources en ligne pour le dépannage.
+
+10. Livrables et Jalons
+Jalons du Projet :
+• Achèvement du Prototype : 15 janvier 2024.
+• Achèvement des Tests : 30 mars 2024.
+• Début de la Production : 1er mai 2024.
+Critères d'Acceptation :
+• Tests de Prototype : Doit passer tous les tests fonctionnels, environnementaux et de conformité avant de passer à la production.
+
+11. Glossaire
+Termes et Définitions :
+• Bus CAN : Un protocole de communication utilisé dans les véhicules pour permettre la communication entre différents composants.
+
+12. Annexes
+Informations Supplémentaires :
+• Dessins Techniques : Inclure des dessins techniques détaillés du HCM.
+• Références aux Normes : Liste de toutes les normes et réglementations pertinentes.
